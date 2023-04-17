@@ -1,5 +1,7 @@
 <template>
-  <Headercomponent/>
+  <header class="d-flex align-items-center">
+    <Headercomponent/>
+  </header>
 
   <Maincomponent/>
 </template>
@@ -17,5 +19,7 @@ import Headercomponent from './components/Headercomponent.vue';
 </script>
 
 <style lang="scss" scoped>
-
+header{
+  background-color: #fefefe;
+}
 </style>
