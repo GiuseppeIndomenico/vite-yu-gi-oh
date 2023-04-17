@@ -1,7 +1,8 @@
 <template>
     <main>
         <div class=" container mt-4">
-            <div class="row p-3">
+            <div v-if="card.length === 50" class="row p-3">
+                
                 <div v-for="x in  card" :key="x.id" class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div>
                         <div class="card mb-3">
@@ -14,6 +15,7 @@
                     </div>
                 </div>
             </div>
+            <div v-else> <h1 class="text-center">Loading...</h1></div>
         </div>
     </main>
 </template>
