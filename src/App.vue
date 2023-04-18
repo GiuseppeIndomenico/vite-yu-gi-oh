@@ -34,7 +34,7 @@ export default {
             const card = {
               id: cardsInfo[i].id,
               name: cardsInfo[i].name,
-              type: cardsInfo[i].type,
+              archetype: cardsInfo[i].archetype,
               imageUrl: cardsInfo[i].card_images[0].image_url
             };
 

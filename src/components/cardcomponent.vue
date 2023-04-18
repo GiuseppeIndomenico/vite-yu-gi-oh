@@ -8,7 +8,7 @@
                             <img :src="x.imageUrl" :alt="x.id">
                             <div class="card-footer ">
                                 <h6>{{ x.name }}</h6>
-                                <p>{{ x.type }}</p>
+                                <p>{{ x.archetype }}</p>
                             </div>
                         </div>
                     </div>
