@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     getCards() {
-      axios.get(store.baseUrl)
+      axios.get(store.baseUrl + store.endUrlCard)
         .then(res => {
           const cardsInfo = res.data.data;
           const cardData = [];
