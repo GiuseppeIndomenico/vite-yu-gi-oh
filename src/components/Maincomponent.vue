@@ -1,30 +1,44 @@
 <template>
-    <nav>
-        <searchcomponent />
-    </nav>
-    <main>
-        <cardcomponent />
-    </main>
-</template>
+    <div>
+      <nav>
+        <searchcomponent @search="handleSearch" />
+      </nav>
 
-
-<script>
-import cardcomponent from './cardcomponent.vue'
-import searchcomponent from './searchcomponent.vue';
-export default {
-    components: {
-        cardcomponent,
-        searchcomponent
+      <main>
+        <cardcomponent :cards="store.cards" ref="cardcomponent" />
+      </main>
+    </div>
+  </template>
+  
+  <script>
+  import cardcomponent from './cardcomponent.vue'
+  import searchcomponent from './searchcomponent.vue';
+  import { store } from '../data/store';
+  
+  export default {
+    data() {
+      return {
+        store
+      }
     },
-
-}
-</script>
-
+    components: {
+      cardcomponent,
+      searchcomponent
+    },
+    methods: {
+      handleSearch(cards) {
+        this.store.cards = cards;
+      }
+    }
+  }
+  </script>
+  
 <style lang="scss" scoped>
-div {
-    background-color: #fefefe;
-};
-nav{
+nav {
     background-color: orange;
+}
+
+main{
+    background-color: #fefefe;
 }
 </style>

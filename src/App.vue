@@ -1,9 +1,12 @@
 <template>
-  <header class="d-flex align-items-center">
-    <Headercomponent />
-  </header>
-
-  <Maincomponent />
+  <div>
+    <header class="d-flex align-items-center">
+      <Headercomponent />
+    </header>
+    <main>
+      <Maincomponent @search="handleSearch" />
+    </main>
+  </div>
 </template>
 
 <script>
@@ -45,7 +48,9 @@ export default {
         })
 
     },
-
+    handleSearch(cards) {
+      store.cards = cards;
+    }
   },
   mounted() {
     this.getCards()
@@ -53,8 +58,11 @@ export default {
 }
 </script>
 
+
 <style lang="scss" scoped>
 header {
   background-color: #fefefe;
 }
+
+
 </style>
