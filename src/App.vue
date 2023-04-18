@@ -7,13 +7,20 @@
 </template>
 
 <script>
+import {store} from './data/store.js'
 import Maincomponent from './components/Maincomponent.vue';
 import Headercomponent from './components/Headercomponent.vue';
 
   export default {
+   data(){
+    return{
+      store
+    }
+   },
     components:{
       Headercomponent,
       Maincomponent,
+   
   }
 }
 </script>
