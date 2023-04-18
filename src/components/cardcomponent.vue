@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import {store} from '../data/store'
     export default {
         data() {
@@ -27,33 +26,7 @@ import {store} from '../data/store'
           store
         }
     },
-    methods: {
-        getCards() {
-            axios.get(store.baseUrl)
-                .then(res => {
-                    const cardsInfo= res.data.data;
-                    const cardData = [];
-
-                    for (let i = 0; i < cardsInfo.length; i++) {
-                        const card = {
-                            id: cardsInfo[i].id,
-                            name: cardsInfo[i].name,
-                            type: cardsInfo[i].type,
-                            imageUrl: cardsInfo[i].card_images[0].image_url
-                        };
-
-                        cardData.push(card);
-                    }
-                    store.cards = cardData;
-
-                })
-
-        },
-
-    },
-    mounted() {
-        this.getCards()
-    }
+   
     }
 </script>
 
