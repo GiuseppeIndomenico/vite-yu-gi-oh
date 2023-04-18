@@ -63,6 +63,4 @@ export default {
 header {
   background-color: #fefefe;
 }
-
-
 </style>

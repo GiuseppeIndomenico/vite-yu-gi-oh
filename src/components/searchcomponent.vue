@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="searchCards">
         <div class="input-group my-3 text-center">
-            <input v-model="cardName" type="text" class="form-control" name="cardname" placeholder="Cerca per nome...">
+            <input v-model="cardName" type="text" class="form-control" name="cardName" placeholder="Cerca per nome...">
             <select v-model="selectedArchetype" class="form-select" id="searchArchetype" name="archetype">
                 <option selected disabled value="">Seleziona Archetype</option>
                 <option v-for="archetype in archetypeList" :value="archetype.archetype_name">{{ archetype.archetype_name }}
