@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import {store} from '../data/store'
     export default {
         data() {
@@ -31,5 +32,19 @@ import {store} from '../data/store'
 </script>
 
 <style lang="scss" scoped>
+.card-footer {
+    background-color: orange;
 
+    h6 {
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        padding: .5rem;
+    };
+    p{
+        text-align: center;
+        padding: .5rem;
+    }
+
+}
 </style>
